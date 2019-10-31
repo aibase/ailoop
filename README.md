@@ -1,10 +1,10 @@
-# aimetablog
+# ai meta blog
 
 > recombinant post engine
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm run install
 
