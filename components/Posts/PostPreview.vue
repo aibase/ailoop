@@ -1,14 +1,38 @@
 <template>
-  <nuxt-link class="post-preview" v-bind:to="'/posts/' + 1">
+  <nuxt-link class="post-preview" v-bind:to="'/posts/' + id">
     <article>
-      <div class="post-thumbnail"></div>
+      <div class="post-thumbnail" :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
       <div class="post-content">
-        <h1>Post Title</h1>
-        <p>Preview Text</p>
+        <h1>{{ title }}</h1>
+        <p>{{ previewText }}</p>
       </div>
     </article>
   </nuxt-link>
 </template>
+
+<script>
+export default {
+  name: "PostPreview",
+  props: {
+    id: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    previewText: {
+      type: String,
+      required: true
+    },
+    thumbnail: {
+      type: String,
+      required: true
+    }
+  }
+};
+</script>
 
 <style scoped>
 .post-preview {
@@ -35,7 +59,6 @@ a {
   height: 200px;
   background-position: center;
   background-size: cover;
-  background-image: url("~assets/img/innovators-200.jpg");
 }
 
 .post-content {

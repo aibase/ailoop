@@ -4,9 +4,24 @@
       <h1>Progress at AI speed!</h1>
     </section>
     <section class="featured-posts">
-      <PostPreview />
-      <PostPreview />
-      <PostPreview />
+      <PostPreview
+        id="1"
+        thumbnail="https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
+        title="Hello there!"
+        previewText="This is my first post!"
+      />
+      <PostPreview
+        id="2"
+        thumbnail="https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
+        title="Hello there - second time!"
+        previewText="This is my second post!"
+      />
+      <PostPreview
+        id="3"
+        thumbnail="https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
+        title="Hi!"
+        previewText="This is my third post!"
+      />
     </section>
   </div>
 </template>
