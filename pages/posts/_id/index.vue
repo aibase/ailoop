@@ -13,7 +13,7 @@
         Let me know what you think about the post, send a mail to
         <a
           href="mailto:feedback@w3ai.org"
-        >stefian@w3ai.org</a>
+        >feedback@w3ai.org</a>
       </p>
     </section>
   </div>

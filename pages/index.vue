@@ -4,8 +4,8 @@
       <h1>Progress at AI speed!</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link v-bind:to="'/posts/' + 1">
-        <article class="post-preview">
+      <nuxt-link class="post-preview" v-bind:to="'/posts/' + 1">
+        <article>
           <div class="post-thumbnail"></div>
           <div class="post-content">
             <h1>Post Title</h1>
@@ -13,8 +13,8 @@
           </div>
         </article>
       </nuxt-link>
-      <nuxt-link v-bind:to="'/posts/' + 2">
-        <article class="post-preview">
+      <nuxt-link class="post-preview" v-bind:to="'/posts/' + 2">
+        <article>
           <div class="post-thumbnail"></div>
           <div class="post-content">
             <h1>Post Title 2</h1>
@@ -90,6 +90,7 @@ a {
   height: 200px;
   background-position: center;
   background-size: cover;
+  background-image: url("~assets/img/innovators-200.jpg");
 }
 
 .post-content {
