@@ -4,27 +4,22 @@
       <h1>Progress at AI speed!</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link class="post-preview" v-bind:to="'/posts/' + 1">
-        <article>
-          <div class="post-thumbnail"></div>
-          <div class="post-content">
-            <h1>Post Title</h1>
-            <p>Preview Text</p>
-          </div>
-        </article>
-      </nuxt-link>
-      <nuxt-link class="post-preview" v-bind:to="'/posts/' + 2">
-        <article>
-          <div class="post-thumbnail"></div>
-          <div class="post-content">
-            <h1>Post Title 2</h1>
-            <p>Preview Text 2</p>
-          </div>
-        </article>
-      </nuxt-link>
+      <PostPreview />
+      <PostPreview />
+      <PostPreview />
     </section>
   </div>
 </template>
+
+<script>
+import PostPreview from "@/components/Posts/PostPreview";
+
+export default {
+  components: {
+    PostPreview
+  }
+};
+</script>
 
 <style scoped>
 .intro {
@@ -64,43 +59,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-  background-image: url("~assets/img/innovators-200.jpg");
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 </style>
 
