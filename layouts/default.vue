@@ -21,7 +21,7 @@ export default {
     };
   }
 };
-</script>script
+</script>
 
 <style>
 html {
