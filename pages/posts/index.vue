@@ -14,7 +14,7 @@ export default {
   asyncData(context, callback) {
     // executed on server
     setTimeout(() => {
-      callback(null, {
+      callback(new Error(), {
         loadedPosts: [
           {
             id: "1",
