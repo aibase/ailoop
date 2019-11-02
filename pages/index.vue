@@ -14,36 +14,16 @@ export default {
   components: {
     PostList
   },
-  asyncData(context, callback) {
-    // executed on server
-    // console.log(context);
-    setTimeout(() => {
-      callback(null, {
-        loadedPosts: [
-          {
-            id: "1",
-            title: "First Post",
-            previewText: "This is our first post!",
-            thumbnail:
-              "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
-          },
-          {
-            id: "2",
-            title: "Second Post",
-            previewText: "This is our second post!",
-            thumbnail:
-              "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
-          }
-        ]
-      });
-    }, 1500);
-  },
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts;
+    }
+  }
   // data() { // executed on client
   //   return {
   //     loadedPosts: []
   //   };
   // },
-  created() {}
 };
 </script>
 
