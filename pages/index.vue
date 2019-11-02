@@ -16,6 +16,7 @@ export default {
   },
   asyncData(context, callback) {
     // executed on server
+    console.log("asyncdata is executed!");
     setTimeout(() => {
       callback(null, {
         loadedPosts: [

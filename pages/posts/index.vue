@@ -1,6 +1,6 @@
 <template>
   <div class="posts-page">
-    <PostList :posts="topPosts" />
+    <PostList :posts="loadedPosts" />
   </div>
 </template>
 
@@ -15,18 +15,18 @@ export default {
     // executed on server
     setTimeout(() => {
       callback(null, {
-        topPosts: [
+        loadedPosts: [
           {
-            id: "3",
-            title: "Third Post",
-            previewText: "This is our third post!",
+            id: "1",
+            title: "First Post",
+            previewText: "This is our first post!",
             thumbnail:
               "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
           },
           {
-            id: "4",
-            title: "Fourth Post",
-            previewText: "This is our fourth post!",
+            id: "2",
+            title: "Second Post",
+            previewText: "This is our second post!",
             thumbnail:
               "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
           }
