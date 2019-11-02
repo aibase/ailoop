@@ -14,6 +14,9 @@ export default {
   // same as asyncData - method added by Nuxt to run on server or client
   fetch(context) {
     // executed on server
+    if (context.store.state.loadedPosts > 0) {
+      return null;
+    } // to exexcute loading posts if any
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve({
