@@ -11,7 +11,8 @@ export default {
   components: {
     PostList
   },
-  asyncData(context) {
+  // same as asyncData - method added by Nuxt to run on server or client
+  fetch(context) {
     // executed on server
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -37,15 +38,16 @@ export default {
       // reject(new Error());
     })
       .then(data => {
-        return data;
+        context.store.commit("setPosts", data.loadedPosts);
       })
       .catch(e => {
         context.error(e);
       });
   },
-  created() {
-    this.$store.dispatch("setPosts", this.loadedPosts);
-    // console.log(this.$store.getters.loadedPosts);
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts;
+    }
   }
 };
 </script>
