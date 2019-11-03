@@ -13,6 +13,10 @@ const createStore = () => {
     actions: {
       // initialize vuex store with values (matrices) from server mem, fs or db 
       nuxtServerInit(vuexContext, context) {
+        // if (!process.client) {
+        //   // here can execute code on the server - not recommended
+        //   console.log(context.req.session)
+        // }
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             vuexContext.commit('setPosts', [
