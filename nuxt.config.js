@@ -19,7 +19,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#8cc152', height: '4px' },
   /*
   ** Global CSS
   */
@@ -49,5 +49,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://ailoop.firebaseio.com'
   }
 }

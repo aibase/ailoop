@@ -23,7 +23,7 @@ const createStore = () => {
     actions: {
       // initialize vuex store with values (matrices) from server mem, fs or db 
       nuxtServerInit(vuexContext, context) {
-        return axios.get('https://ailoop.firebaseio.com/posts.json')
+        return axios.get(process.env.baseUrl + '/posts.json')
           .then(res => {
             const postsArray = []
             for (const key in res.data) {
