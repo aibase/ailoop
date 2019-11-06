@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  middleware: "market",
   computed: {
     loadedPosts() {
       return this.$store.getters.loadedPosts;

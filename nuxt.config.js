@@ -65,5 +65,11 @@ export default {
   transition: {
     name: 'fade',
     mode: 'out-in'
-  }
+  },
+  /*
+  ** Middleware code to run before you enter any route
+  */
+  // router: {
+  //   middleware: 'log'
+  // }
 }
