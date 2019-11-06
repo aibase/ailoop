@@ -42,7 +42,13 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
+  axios: {
+    baseURL: process.env.BASE_URL || 'https://ailoop.firebaseio.com',
+    credentials: false
+  },
+
   /*
   ** Build configuration
   */
