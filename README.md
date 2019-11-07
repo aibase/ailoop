@@ -1,6 +1,6 @@
-# ai meta blog
+# ai meta loop
 
-> recombinant ai engine
+> recombinant ai engine / universal web app & node server
 
 ## Build Setup
 
