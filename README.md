@@ -1,6 +1,6 @@
 # ai meta blog
 
-> recombinant post engine
+> recombinant ai engine
 
 ## Build Setup
 
