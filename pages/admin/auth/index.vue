@@ -1,7 +1,7 @@
 <template>
   <div class="admin-auth-page">
     <div class="auth-container">
-      <form>
+      <form @submit.prevent="onSubmit">
         <AppControlInput type="email">E-Mail Address</AppControlInput>
         <AppControlInput type="password">Password</AppControlInput>
         <AppButton type="submit">{{ isLogin ? 'Login' : 'Sign Up' }}</AppButton>
@@ -25,6 +25,13 @@ export default {
     return {
       isLogin: true
     };
+  },
+  methods: {
+    onSubmit() {
+      this.$axios.$post(
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]"
+      );
+    }
   }
 };
 </script>
