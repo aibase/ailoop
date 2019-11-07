@@ -10,10 +10,8 @@
     </section>
     <section class="post-feedback">
       <p>
-        Let me know what you think about the post, send a mail to
-        <a
-          href="mailto:feedback@w3ai.org"
-        >feedback@w3ai.org</a>
+        Thoughts about the post @
+        <a href="https://github.com/aibase/ailoop/issues">feedback loop</a>
       </p>
     </section>
   </div>

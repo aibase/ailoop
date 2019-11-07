@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <section class="intro">
-      <h1>Progress at AI speed!</h1>
+      <h1>projects @ ai speed</h1>
     </section>
     <PostList :posts="loadedPosts" />
   </div>
