@@ -1,4 +1,4 @@
-# ai meta loop
+# ai loop web app and node server (universal nuxt app)
 
 > recombinant ai engine / universal web app & node server
 
