@@ -1,5 +1,5 @@
 nuxt.config.js
-pages/admin/auth/
+# pages/admin/auth/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
