@@ -52,7 +52,7 @@ const createStore = () => {
       editPost(vuexContext, editedPost) {
         return this.$axios.$put("https://ailoop.firebaseio.com/posts/" +
             editedPost.id +
-            ".json",
+            ".json?auth=" + vuexContext.state.token,
           editedPost
         )
         .then(res => {
