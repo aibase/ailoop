@@ -88,6 +88,8 @@ const createStore = () => {
             localStorage.setItem('tokenExpiration', new Date().getTime() + Number.parseInt(result.expiresIn) * 1000);
             Cookie.set('jwt', result.idToken);
             Cookie.set('expirationDate', new Date().getTime() + Number.parseInt(result.expiresIn) * 1000);
+            // Dummy axios Post request to an API Middleware
+            return this.$axios.$post('http://localhost:3000/api/track-data', { data: 'Authenticated!' })
           })
           .catch(e => console.log(e));
       },
