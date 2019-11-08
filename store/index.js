@@ -43,7 +43,7 @@ const createStore = () => {
           updatedDate: new Date()
         }
         return this.$axios
-        .$post("https://ailoop.firebaseio.com/posts.json", createdPost)
+        .$post("https://ailoop.firebaseio.com/posts.json?auth=" + vuexContext.state.token, createdPost)
           .then(data => {
             vuexContext.commit('addPost', { ...createdPost, id: data.name })
         })
