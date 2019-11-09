@@ -1,6 +1,6 @@
 # ai loop - web app & node server
 
-> recombinant ai engine / universal web app & node server (universal nuxt app)
+> recombinant ai engine / free market app & web server (universal nuxt app)
 
 ## Build Setup
 
