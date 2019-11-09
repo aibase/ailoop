@@ -10,7 +10,7 @@
     </section>
     <section class="post-feedback">
       <p>
-        Thoughts about the post @
+        Project / Service feedback @
         <a href="https://github.com/aibase/ailoop/issues">feedback loop</a>
       </p>
     </section>
