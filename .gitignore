@@ -1,6 +1,8 @@
 nuxt.config.js
 # pages/admin/auth/
 
+.firebase/
+
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
