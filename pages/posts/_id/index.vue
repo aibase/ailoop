@@ -20,6 +20,12 @@
 <script>
 export default {
   asyncData(context) {
+    if (context.payload) {
+      // this will run just during npm run generate / nuxt generate
+      return {
+        loadedPost: context.payload.postData
+      };
+    }
     return context.app.$axios
       .$get("/posts/" + context.params.id + ".json")
       .then(data => {
