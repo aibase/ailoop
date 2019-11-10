@@ -1,5 +1,6 @@
 import Vuex from 'vuex';
 import Cookie from 'js-cookie';
+// import openSocket from "socket.io-client";
 
 const createStore = () => {
   return new Vuex.Store({
@@ -134,6 +135,7 @@ const createStore = () => {
     },
     getters: {
       loadedPosts(state) {
+        // openSocket("http://localhost:8080");
         return state.loadedPosts
       },
       isAuthenticated(state) {

@@ -8,9 +8,12 @@
 </template>
 
 <script>
+// import openSocket from "socket.io-client";
+
 export default {
   computed: {
     loadedPosts() {
+      // openSocket("http://localhost:8080");
       return this.$store.getters.loadedPosts;
     }
   }
