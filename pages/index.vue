@@ -13,15 +13,17 @@ import openSocket from "socket.io-client";
 export default {
   computed: {
     loadedPosts() {
-      openSocket("http://localhost:8081");
-      return this.$store.getters.loadedPosts;
+      let updatedPosts = [];
+      const socket = openSocket("http://localhost:8081");
+      socket.on("posts", data => {
+        if (data.action === "create") {
+          updatedPosts = [...this.$store.getters.loadedPosts];
+          updatedPosts.unshift(data.post);
+        }
+      });
+      return updatedPosts;
     }
   }
-  // data() { // executed on client
-  //   return {
-  //     loadedPosts: []
-  //   };
-  // },
 };
 </script>
 
