@@ -31,16 +31,17 @@ export default {
             imageUrl: "",
             content: "",
             previewText: "",
-            postType: "prj/srv",
-            interestTags: "",
-            sheets: `match-1: Social
-            match-2: Money
-            match-3: Terms
-            match-4: Deal
-            match-5: Input
-            match-6: Steps
-            match-7: Output
-            match-8: Pay`
+            postType: "project / service",
+            interestTags: "what change",
+            sheets: `tab 1: Social
+tab 2: Money
+tab 3: Terms
+tab 4: Deal
+
+tab 5: Input
+tab 6: Steps
+tab 7: Output
+tab 8: Pay`
           }
     };
   },
