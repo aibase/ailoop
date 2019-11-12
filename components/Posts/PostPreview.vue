@@ -1,7 +1,7 @@
 <template>
   <nuxt-link class="post-preview" v-bind:to="postLink">
     <article>
-      <div class="post-thumbnail" :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
+      <div class="post-thumbnail" :style="{backgroundImage: 'url(' + imageUrl + ')'}"></div>
       <div class="post-content">
         <h1>{{ title }}</h1>
         <p>{{ previewText }}</p>
@@ -30,7 +30,7 @@ export default {
       type: String,
       required: true
     },
-    thumbnail: {
+    imageUrl: {
       type: String,
       required: true
     }
