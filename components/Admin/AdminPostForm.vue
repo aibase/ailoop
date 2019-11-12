@@ -3,8 +3,11 @@
     <AppControlInput v-model="editedPost.creator">Author Name</AppControlInput>
     <AppControlInput v-model="editedPost.title">Title</AppControlInput>
     <AppControlInput v-model="editedPost.previewText">Preview Text</AppControlInput>
+    <AppControlInput v-model="editedPost.postType">Type</AppControlInput>
+    <AppControlInput v-model="editedPost.interestTags">Interest Tags</AppControlInput>
     <AppControlInput v-model="editedPost.imageUrl">Thumbnail Link</AppControlInput>
     <AppControlInput control-type="textarea" v-model="editedPost.content">Content</AppControlInput>
+    <AppControlInput control-type="textarea" v-model="editedPost.sheets">Sheets</AppControlInput>
     <AppButton type="submit">Save</AppButton>
     <AppButton type="button" style="margin-left: 10px" btn-style="cancel" @click="onCancel">Cancel</AppButton>
   </form>
@@ -27,7 +30,17 @@ export default {
             title: "",
             imageUrl: "",
             content: "",
-            previewText: ""
+            previewText: "",
+            postType: "prj/srv",
+            interestTags: "",
+            sheets: `match-1: Social
+            match-2: Money
+            match-3: Terms
+            match-4: Deal
+            match-5: Input
+            match-6: Steps
+            match-7: Output
+            match-8: Pay`
           }
     };
   },
