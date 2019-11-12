@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="onSave">
-    <AppControlInput v-model="editedPost.author">Author Name</AppControlInput>
+    <AppControlInput v-model="editedPost.creator">Author Name</AppControlInput>
     <AppControlInput v-model="editedPost.title">Title</AppControlInput>
     <AppControlInput v-model="editedPost.thumbnail">Thumbnail Link</AppControlInput>
     <AppControlInput control-type="textarea" v-model="editedPost.content">Content</AppControlInput>
@@ -23,7 +23,7 @@ export default {
       editedPost: this.post
         ? { ...this.post }
         : {
-            author: "",
+            creator: "",
             title: "",
             thumbnail: "",
             content: "",
