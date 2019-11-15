@@ -17,7 +17,7 @@ export default {
   },
   asyncData(context) {
     return context.app.$axios
-      .$get("/posts/" + context.params.postId + ".json")
+      .$get("/feed/posts/" + context.params.postId)
       .then(data => {
         return {
           loadedPost: { ...data, id: context.params.postId }

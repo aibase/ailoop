@@ -32,7 +32,7 @@ const createStore = () => {
       // initialize vuex store with values (matrices) from server mem, fs or db 
       nuxtServerInit(vuexContext, context) {
         return context.app.$axios
-          .$get('/posts.json')
+          .$get('/posts')
           .then(data => {
             const postsArray = []
             for (const key in data) {
@@ -48,16 +48,16 @@ const createStore = () => {
           updatedDate: new Date()
         }
         return this.$axios
-        .$post("https://ailoop.firebaseio.com/posts.json?auth=" + vuexContext.state.token, createdPost)
+        .$post("/feed/posts?auth=" + vuexContext.state.token, createdPost)
           .then(data => {
             vuexContext.commit('addPost', { ...createdPost, id: data.name })
         })
         .catch(e => console.log(e));
       },
       editPost(vuexContext, editedPost) {
-        return this.$axios.$put("https://ailoop.firebaseio.com/posts/" +
+        return this.$axios.$put("/feed/posts/" +
             editedPost.id +
-            ".json?auth=" + vuexContext.state.token,
+            "?auth=" + vuexContext.state.token,
           editedPost
         )
         .then(res => {
