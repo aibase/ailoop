@@ -1,7 +1,7 @@
 {
-  "name": "aimetablog",
-  "version": "1.0.0",
-  "description": "recombinant post engine",
+  "name": "ailoop",
+  "version": "0.1.0",
+  "description": "ai colab engine",
   "author": "Stefan Ianta",
   "private": true,
   "scripts": {
